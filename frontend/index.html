@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LifeTimeIQ - AI Customer Lifetime Value Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-violet">
+
+  <!-- Atmospheric Background Glow Elements -->
+  <div class="bg-glow-orb orb-1"></div>
+  <div class="bg-glow-orb orb-2"></div>
+
+  <!-- iOS-Inspired Frosted Glass Login Screen -->
+  <div id="login-screen">
+    <div class="login-card">
+      <div class="app-badge-icon">💎</div>
+      <h1>LifeTimeIQ</h1>
+      <p class="subtitle">AI-Powered Customer Lifetime Valuation</p>
+
+      <!-- Multi-Color Palette Switcher -->
+      <div class="account-selector-title">Select Color Atmosphere</div>
+      <div class="theme-picker-bar">
+        <div class="theme-dot active" data-theme="theme-violet" style="background:#7c3aed; color:#7c3aed;" title="Violet Nebula"></div>
+        <div class="theme-dot" data-theme="theme-emerald" style="background:#059669; color:#059669;" title="Cyber Emerald"></div>
+        <div class="theme-dot" data-theme="theme-sunset" style="background:#e11d48; color:#e11d48;" title="Sunset Ruby"></div>
+        <div class="theme-dot" data-theme="theme-ocean" style="background:#0284c7; color:#0284c7;" title="Deep Ocean Sky"></div>
+        <div class="theme-dot" data-theme="theme-midnight" style="background:#6366f1; color:#6366f1;" title="Midnight Obsidian"></div>
+      </div>
+
+      <!-- Select Target Account (3 Roles) -->
+      <div class="account-selector-title" style="margin-top:16px;">1. Choose Account Profile To Access</div>
+      <div class="account-cards-grid">
+        <div class="account-select-card selected" data-acc="Admin">
+          <div class="acc-icon">👑</div>
+          <div class="acc-title">Admin</div>
+          <div class="acc-desc">Full System</div>
+        </div>
+        <div class="account-select-card" data-acc="Analyst">
+          <div class="acc-icon">📊</div>
+          <div class="acc-title">Analyst</div>
+          <div class="acc-desc">ML & Predict</div>
+        </div>
+        <div class="account-select-card" data-acc="Manager">
+          <div class="acc-icon">💼</div>
+          <div class="acc-title">Manager</div>
+          <div class="acc-desc">Reports Only</div>
+        </div>
+      </div>
+
+      <!-- Explicit Credentials Input -->
+      <div class="account-selector-title">2. Enter Account Credentials</div>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" placeholder="Enter username (e.g. admin)">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••">
+      </div>
+
+      <div id="login-err" style="color:#f87171; font-size:13px; font-weight:700; margin: 8px 0 12px; min-height:18px;"></div>
+
+      <button id="login-btn" class="btn">Sign In to Dashboard</button>
+
+      <div style="text-align:center; margin-top:16px;">
+        <a id="swap-auth-mode" style="font-size:13px; color:var(--primary-light); font-weight:700; cursor:pointer;">Need to register a new user? Click here</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Shell -->
+  <div id="app-screen">
+    <aside>
+      <div class="brand-header">
+        <div class="logo-sq">💎</div>
+        <div>
+          <h2>LifeTimeIQ</h2>
+          <small>AI CLV Studio</small>
+        </div>
+      </div>
+
+      <div class="nav-tabs">
+        <div class="nav-tab active" data-tab="dashboard">📊 Dashboard</div>
+        <div class="nav-tab" data-tab="predict">🔮 Predict CLV</div>
+        <div class="nav-tab" data-tab="customers">👥 Customers</div>
+        <div class="nav-tab" data-tab="segments">🎯 Segments</div>
+        <div class="nav-tab" data-tab="budget">💰 Budget Planner</div>
+        <div class="nav-tab" data-tab="model">🧠 Model Lab</div>
+        <div class="nav-tab" data-tab="about">ℹ️ About</div>
+      </div>
+
+      <div class="user-profile-box">
+        <div id="user-display"></div>
+        <button id="logout-btn" class="btn btn-outline" style="width:100%; margin-top:10px; font-size:12px; padding:8px;">Sign Out</button>
+      </div>
+    </aside>
+
+    <main id="main-view"></main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
